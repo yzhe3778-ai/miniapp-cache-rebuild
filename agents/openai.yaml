@@ -1,0 +1,4 @@
+interface:
+  display_name: "微信小程序拆解与本地复刻"
+  short_description: "核对微信缓存与哈希，按功能学习代码、资产、UI 和接口，独立复刻并验收"
+  default_prompt: "使用 $miniapp-cache-rebuild 解包并研究我已打开的微信小程序，按功能整理代码与未知项，在新目录复刻本地版并验证保存、恢复与导出。"

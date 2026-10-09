@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "miniapp-cache-rebuild"
+version = "1.1.1"
+description = "Evidence-based local WeChat miniapp cache decoding and reconstruction workflow"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+authors = [{name = "Ruoyu"}]
+dependencies = ["pycryptodome==3.23.0"]
+
+[tool.setuptools]
+packages = []
+
+# CLI scripts remain in this self-contained skill folder.

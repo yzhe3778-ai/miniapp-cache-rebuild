@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "source": {
+    "file": null,
+    "sha256": null,
+    "viewport": {
+      "width": 390,
+      "height": 844,
+      "dpr": 1,
+      "host_zoom": 1
+    },
+    "font": null,
+    "scroll_y": 0,
+    "page": null,
+    "state": null,
+    "data_time": null,
+    "animation_time_ms": null
+  },
+  "local": {
+    "file": null,
+    "sha256": null,
+    "viewport": {
+      "width": 390,
+      "height": 844,
+      "dpr": 1,
+      "host_zoom": 1
+    },
+    "font": null,
+    "scroll_y": 0,
+    "page": null,
+    "state": null,
+    "data_time": null,
+    "animation_time_ms": null
+  },
+  "differences": [],
+  "status": "unverified",
+  "reviewer": null
+}

@@ -1,0 +1,16 @@
+name: Feature request
+description: Describe a supported workflow or a narrowly scoped extension.
+title: "[Feature] "
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: User outcome and evidence
+      description: What is missing, what format/platform is involved, and what can be validated with synthetic or authorized samples?
+    validations:
+      required: true
+  - type: textarea
+    id: boundaries
+    attributes:
+      label: Boundaries
+      description: Scope, unknown backend/native behavior, and expected acceptance criteria. Do not attach credentials or commercial original packages.
