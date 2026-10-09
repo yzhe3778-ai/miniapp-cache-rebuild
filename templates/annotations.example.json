@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "identity": {
+    "status": "unverified",
+    "evidence": []
+  },
+  "viewport": {
+    "width": 390,
+    "height": 844,
+    "dpr": 1,
+    "hostZoom": 1
+  },
+  "visits": [],
+  "keyNames": [
+    "API_BASE_URL",
+    "API_KEY",
+    "APPID"
+  ],
+  "acceptance": [
+    {
+      "category": "visual",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "category": "core_flow",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "category": "save",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "category": "reload_restore",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "category": "export_readback",
+      "status": "missing",
+      "evidence": []
+    },
+    {
+      "category": "errors",
+      "status": "missing",
+      "evidence": []
+    }
+  ],
+  "data_sources": [],
+  "endpoints": [],
+  "prompts": [],
+  "gaps": []
+}

@@ -1,0 +1,47 @@
+miniapp-cache-rebuild Educational Non-Commercial License 1.0
+
+Copyright (c) 2026 若宇 (Ruoyu)
+
+仅供学习，禁止商用。 / For educational use only. Commercial use is prohibited.
+
+1. Scope
+This license applies only to original code, documentation, generic templates and
+synthetic tests contributed by the copyright holder in this release. Third-party
+software and materials retain their own licenses and rights.
+
+2. Permitted use
+You may view, download, study, run and modify the covered materials for personal,
+non-commercial educational research. You may share non-commercial copies of the
+covered materials if you preserve this license, copyright notice, attribution,
+and identify your modifications. GitHub users may view and fork this repository
+as provided by GitHub's terms.
+
+3. Prohibited commercial use
+Without a separate written license from the copyright holder, you may not use the
+covered materials in commercial products, paid services, client delivery,
+for-profit business operations, paid courses or training, or sell, rent, license
+or monetize the covered materials or derivative works.
+
+4. Target materials and authorization
+This license does not grant any rights in miniapp packages, extracted code,
+images, designs, trademarks, user data or service responses belonging to others.
+Research access does not itself grant redistribution or commercial rights. Obtain
+the necessary authorization separately. Do not distribute credentials or personal
+data. This repository distributes tools only, not third-party miniapp materials.
+
+5. Prior versions and dependencies
+This license applies to this release and does not rewrite licenses attached to
+previously distributed versions. Third-party dependencies remain subject to their
+original licenses; see THIRD_PARTY_NOTICES.md. No restriction here supersedes
+rights granted independently by those licensors.
+
+6. Warranty
+THE COVERED MATERIALS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. TO THE
+EXTENT PERMITTED BY APPLICABLE LAW, THE COPYRIGHT HOLDER IS NOT LIABLE FOR CLAIMS,
+DAMAGES OR OTHER LIABILITY ARISING FROM THEIR USE.
+
+Contact: https://github.com/yzhe3778-ai/miniapp-cache-rebuild/issues
+
+This is publicly available source under an educational non-commercial license,
+not an OSI-approved open-source license. For commercial use, contact the author
+and obtain a separate written authorization before use.

@@ -1,0 +1,6 @@
+{
+  "allowed_hosts": [
+    "static.example.org"
+  ],
+  "assets": []
+}

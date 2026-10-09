@@ -1,0 +1,18 @@
+{
+  "name": "miniapp-cache-rebuild-static-analysis",
+  "version": "1.1.1",
+  "private": true,
+  "description": "Bounded static analysis of verified miniapp cache files; never executes target code.",
+  "scripts": {
+    "test:analyze": "node --test tests/test_analyze.cjs",
+    "test": "node --test tests/test_analyze.cjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@babel/parser": "7.29.7",
+    "@babel/traverse": "7.29.7",
+    "@babel/generator": "7.29.7"
+  }
+}
