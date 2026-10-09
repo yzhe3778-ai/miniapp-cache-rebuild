@@ -182,9 +182,9 @@
       "sha256": "bbdf52fcce68d5549c113a34ac6a7a1d5a1285a176689f10150710b734f4b59e"
     },
     {
-      "byte_length": 154,
+      "byte_length": 153,
       "path": "templates/acceptance.csv",
-      "sha256": "9690b6222f461f7362022268ca0cb20705256ec2ea5febe1b45dfc16ab93e567"
+      "sha256": "b88ff36c3b283144819e1fd041be4bcf872bd4bb07a023f3599fc2a1800af57e"
     },
     {
       "byte_length": 914,
@@ -197,24 +197,24 @@
       "sha256": "2f2bf8d313b4e4e02bd6ba844f1de0d56c21d2b2c0d8750f9b94fcf7d01f1277"
     },
     {
-      "byte_length": 122,
+      "byte_length": 121,
       "path": "templates/assets.csv",
-      "sha256": "91fb0df9a21a4f27a06ff2bb26088117a30d1438e98f1c2470e1b2bd4b5fa499"
+      "sha256": "1f5945cf42bb7a1b06945e20d08e69fbebe78ebde71ca92ad4c71e401a5aecd4"
     },
     {
-      "byte_length": 114,
+      "byte_length": 113,
       "path": "templates/completion.csv",
-      "sha256": "d35b9e8d437403bbb28d617897e746082c3d69baf101a70ec5382df2dc907750"
+      "sha256": "51f339fcb70c69e44a871f031d8b2325fb4d1b6119b8066cdeb9d616c9baec15"
     },
     {
-      "byte_length": 108,
+      "byte_length": 107,
       "path": "templates/data-sources.csv",
-      "sha256": "d30ac1aa4f0833d82d439eec2f06dd0ae561339393cf657ce65465a4a5e28f67"
+      "sha256": "3cc1878806454dd22bbf8758e747d8ebd95c03ad3c51248ed780f3aa0dfaa302"
     },
     {
-      "byte_length": 129,
+      "byte_length": 128,
       "path": "templates/endpoints.csv",
-      "sha256": "417242b612c69a00d9e4b3ef7e035ab8a595b542dacdfa54e7e82ecf43af9d98"
+      "sha256": "2f5caa77465384a122620a5c593ac95bbba16469948b8fce476eba7f116545aa"
     },
     {
       "byte_length": 161,
@@ -227,14 +227,14 @@
       "sha256": "7b7d3a6881f9c7802fa3bb3824d92056bb9d3088d98cfdc4c29dcd0ba7dce85d"
     },
     {
-      "byte_length": 98,
+      "byte_length": 97,
       "path": "templates/navigation.csv",
-      "sha256": "501e9ece19d4c9e3f1cc1357150b93ad7aa72665be350b033200705edf2cfa44"
+      "sha256": "21451e4b6d347cb6bd6640a4519b403ef0a6762efd6a9472a1ecb0d68a252471"
     },
     {
-      "byte_length": 74,
+      "byte_length": 73,
       "path": "templates/prompts.csv",
-      "sha256": "a1c36c7f01ae82730ac6744fbf66fc14692ea41ba1c161ef7aadf5bdabd06069"
+      "sha256": "792404fb06efae372ec8f0e22f274209412afb2bb5656b5750532b9e974dbbb3"
     },
     {
       "byte_length": 70,
