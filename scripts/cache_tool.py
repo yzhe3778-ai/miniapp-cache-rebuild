@@ -18,7 +18,7 @@ from urllib.parse import urlsplit
 
 
 APPID = re.compile(r"wx[0-9a-f]{16}")
-VERSION = "1.0.0"
+VERSION = "1.1.1"
 SCHEMA = 2
 PARSER_FINGERPRINT = "wxapkg-v2-portable-paths-full-coverage"
 MAX_PACKAGE_BYTES = 256 * 1024 * 1024
@@ -241,6 +241,11 @@ def parse_package(raw, max_files=MAX_FILES, max_file_bytes=MAX_FILE_BYTES, max_o
     return entries, shared
 
 
+def portable_relative(path, base):
+    """Serialize evidence paths independently of native filesystem separators."""
+    return path.relative_to(base).as_posix()
+
+
 def load_manifest(out):
     out = Path(out).expanduser().resolve()
     manifest = json.loads(bounded_read(safe_path(out, "package-manifest.json"), 64 * 1024 * 1024))
@@ -348,7 +353,7 @@ def extract_locked(args, source, out, files, errors, identity):
             folder = out / "packages" / (sha(str(file).encode())[:16] + "-" + digest[:16])
             item.update(source_sha256=digest, source_bytes=len(data),
                         mtime_utc=datetime.fromtimestamp(file.stat().st_mtime, timezone.utc).isoformat(),
-                        snapshot=str((folder / "original.wxapkg").relative_to(out)))
+                        snapshot=portable_relative(folder / "original.wxapkg", out))
             write_verified(folder / "original.wxapkg", data, out)
             cached = old.get((str(file), digest))
             if cached and cached.get("parser_fingerprint") == PARSER_FINGERPRINT:
@@ -371,8 +376,8 @@ def extract_locked(args, source, out, files, errors, identity):
             if sha(bounded_read(file, getattr(args, "max_package_bytes", MAX_PACKAGE_BYTES))) != digest:
                 raise ValueError("Source changed during extraction; rerun after cache settles")
             item.update(status="verified", format=format_name, reused_decoded=bool(cached), parser_fingerprint=PARSER_FINGERPRINT,
-                        decoded=str((folder / "decoded.wxapkg").relative_to(out)), decoded_sha256=sha(raw),
-                        decoded_bytes=len(raw), extracted_directory=str((folder / "files").relative_to(out)),
+                        decoded=portable_relative(folder / "decoded.wxapkg", out), decoded_sha256=sha(raw),
+                        decoded_bytes=len(raw), extracted_directory=portable_relative(folder / "files", out),
                         file_count=len(entries), index_bytes_consumed=True, body_bytes_covered=True,
                         source_unchanged=True, extracted_hashes_verified=True,
                         shared_byte_range_entries=shared, files=entries)
@@ -443,7 +448,7 @@ def inventory(args):
             data = bounded_read(path, MAX_FILE_BYTES)
             if len(data) != entry["size"] or sha(data) != entry["sha256"]:
                 raise ValueError(f"Extracted file modified: {path}")
-            evidence = {"package": package["name"], "source": str(path.relative_to(out)), "sha256": entry["sha256"]}
+            evidence = {"package": package["name"], "source": portable_relative(path, out), "sha256": entry["sha256"]}
             suffix = path.suffix.lower()
             if suffix in MEDIA | FONTS:
                 assets.append({**evidence, "path": entry["path"], "bytes": len(data),

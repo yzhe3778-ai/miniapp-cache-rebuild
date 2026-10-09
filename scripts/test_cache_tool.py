@@ -9,7 +9,7 @@ import struct
 import tempfile
 import unittest
 from unittest.mock import patch
-from pathlib import Path
+from pathlib import Path, PureWindowsPath
 from types import SimpleNamespace
 
 import cache_tool as tool
@@ -37,6 +37,21 @@ def quiet_extract(source, out, appid=TARGET):
 
 
 class IntegrityTests(unittest.TestCase):
+    def test_portable_manifest_paths_and_native_windows_serialization(self):
+        root = PureWindowsPath("D:/research/evidence")
+        path = root / "packages" / "snapshot" / "original.wxapkg"
+        self.assertEqual(tool.portable_relative(path, root), "packages/snapshot/original.wxapkg")
+        with tempfile.TemporaryDirectory() as temporary:
+            base = Path(temporary)
+            source, out = base / "source", base / "evidence"
+            source.mkdir()
+            (source / "main.wxapkg").write_bytes(package([("/app-config.json", b'{"pages":[]}')]))
+            self.assertEqual(quiet_extract(source, out)[0], 0)
+            item = tool.load_manifest(out)["packages"][0]
+            for field in ("snapshot", "decoded", "extracted_directory"):
+                self.assertNotIn("\\", item[field])
+                self.assertTrue((out / item[field]).exists())
+
     def test_plain_unicode_and_empty_file(self):
         raw = package([("/页面/标题.txt", "课表".encode()), ("/empty", b"")])
         decoded, format_name = tool.decode(raw, TARGET)
